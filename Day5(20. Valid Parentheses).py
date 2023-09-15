@@ -1,34 +1,36 @@
 class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
+    def isValid(self, s: str) -> bool:
         
-        lcp = strs[0]
-
-        size = len(strs[0])
-        count = 0
-        bucket = ""
+        stack_room = ""
 
 
+        for item in s:
+            if (item == "(") or (item == "{") or (item == "["):
+                stack_room += item
 
-        for i in range(1,len(strs)):
-            if "" == strs[i]:
-                return ""
-            for j in range(len(strs[i])):
-                if j < len(lcp):
-                    #print(strs[i][j], lcp[j])
-                    if strs[i][j] == lcp[j]:
-                        
-                        bucket += lcp[j]
-                        #print(1, bucket)
+            elif stack_room != "":
+                if (item == ")"):
+                    if stack_room[-1] == "(":
+                        stack_room = stack_room[:-1]
                     else:
-                        lcp = bucket[:]
-                        bucket = ""
-                        #print(2, lcp)
-                else:
-                    #print(3)
-                    break
-            #print(4, lcp, bucket)
-            if (len(bucket) < len(lcp) )and (bucket !=""):
-                lcp = bucket[:]
-            bucket = ""
+                        return False
 
-        return lcp
+                elif (item == "}"):
+                    if stack_room[-1] == "{":
+                        stack_room = stack_room[:-1]
+                    else:
+                        return False
+
+                elif (item == "]"):
+                    if stack_room[-1] == "[":
+                        stack_room = stack_room[:-1]
+                    else:
+                        return False
+
+            else:
+                return False
+
+        if stack_room != "":
+            return False
+
+        return True
