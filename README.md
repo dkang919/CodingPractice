@@ -11,7 +11,7 @@ September 10th, 2023
 - first deadline: finish all easy questions
 - resolved goal: finish page=3 and move to intermediate questions
 
-## Statistics (by Dec 24th)
+## Statistics (by Dec 25th)
 - Success Rate: 80%
 - Average Submissions Until Solved: 1.61
   
