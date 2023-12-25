@@ -11,9 +11,9 @@ September 10th, 2023
 - first deadline: finish all easy questions
 - resolved goal: finish page=3 and move to intermediate questions
 
-## Statistics (by Dec 21st)
+## Statistics (by Dec 24th)
 - Success Rate: 80%
-- Average Submissions Until Solved: 1.63
+- Average Submissions Until Solved: 1.61
   
 - BELOW Statistics no longer tracked due to cheated solutions do exist
 - Average Runtime Actual: 226.21 ms
